@@ -13,3 +13,12 @@ $ yarn build
 Open `.next/static/chunks/pages/index-<hash>.js`
 
 Look for `"should not be here"`. Shouldn't be there!
+
+Compare the output if you change the commented line in `pages/index.js` to return `top.msg`:
+```js
+// pages/index.js
+export default function Home() {
+  //return nested.nested.msg;
+  return top.msg;
+}
+```
